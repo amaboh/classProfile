@@ -1,0 +1,51 @@
+---
+title: "classProfile"
+author: "Amabohh"
+date: "2022-09-28"
+output: html_document
+---
+
+# 1. Analysing the Joining Questionnaire
+
+
+For this example we will take an *exploratory* approach 
+
+
+## 1.1 Questionnaire overview
+
+You were asked to complete this short, anonymous questionnaire and to critically reflect on the questions. 
+
+This questionnaire has been created using Google Forms and the link is [https://forms.gle/ZzRAfZvQxwSgVxM28](https://forms.gle/ZzRAfZvQxwSgVxM28).  
+
+My preference for google sheet is based on the following three main reasons
+(i) simplicity, (ii) it's free and (iii) you can easily export the results as a csv file.  We can then import this into R and do the analysis.
+
+**Exercise 1.1:**  Why bother to write R code at all, surely it will be easier to just use a spreadsheet?  How would you answer this question?  
+  
+
+## 1.2 Questionnaire Design  
+
+**Exercise 1.2:**  What are the key design decisions?  
+
+**Exercise 1.3:**  What possible ethical issues might arise? 
+
+**Exercise 1.4:**  How could the questionnaire be improved? 
+
+## 1.3 A short story with a moral
+
+For the Home Country question (Q4) We wanted a pull down menu so the should be constrained (e.g., to avoid UK, United Kingdom, GB, England, etc).  But there are many countries and it feels like this would be a boring and error-prone task to manually copy and paste each country name into Google Forms. 
+
+We used [StackExchange](https://webapps.stackexchange.com/questions/76189/how-to-create-a-countries-drop-down-list-question-without-entering-all-countrie) because I reasoned (i) many other people must want to get a country response and (ii) will use a drop-down list.  ## 1.4 Fetch and clean the data
+
+For simplicity the csv file name is pointed at a recent version I extracted from Google forms and stored on GitHub.  Let's start by fetching the data from GitHub.  
+
+First we must fetch the raw data using a convenient built in function called `read.csv()` that imports the data into an R data frame.  The options indicate the file has headers which can be used as variable names.
+
+Note the UTF encoding option to prevent problems with PC users and unusual characters arising from how PC Excel appends a byte order mark at the start.  If you're super-interested see this
+
+
+```{r}
+
+```
+
+
