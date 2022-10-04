@@ -45,7 +45,9 @@ Note the UTF encoding option to prevent problems with PC users and unusual chara
 
 
 ```{r}
+prop.test(45,100, conf.level = 0.9)
 
+binom.test(6,10,p=0.65,conf.level=0.95)
 ```
 
 
